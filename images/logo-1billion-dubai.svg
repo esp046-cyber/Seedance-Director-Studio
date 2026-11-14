@@ -1,0 +1,32 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 420 160"
+  role="img"
+  aria-labelledby="t"
+>
+  <title id="t">
+    1 Billion Followers Summit Dubai — independent typographic reference, not
+    official logo
+  </title>
+  <rect width="420" height="160" rx="20" fill="#111520" />
+  <path
+    d="M30 115h50M45 115V60h8v55m10 0V38l3-14 3 14v77"
+    fill="none"
+    stroke="#e5a93c"
+    stroke-width="3"
+  />
+  <g font-family="system-ui,sans-serif">
+    <text x="102" y="66" fill="#f2f3f7" font-size="36" font-weight="700">
+      1 BILLION
+    </text>
+    <text x="104" y="91" fill="#a4afc2" font-size="13" letter-spacing="2">
+      FOLLOWERS SUMMIT
+    </text>
+    <text x="104" y="115" fill="#e5a93c" font-size="12" letter-spacing="5">
+      DUBAI · 2027
+    </text>
+    <text x="210" y="143" text-anchor="middle" fill="#a4afc2" font-size="9">
+      INDEPENDENT EVENT REFERENCE · NOT AN OFFICIAL LOGO
+    </text>
+  </g>
+</svg>

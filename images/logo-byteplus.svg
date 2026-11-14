@@ -1,0 +1,29 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 420 160"
+  role="img"
+  aria-labelledby="t"
+>
+  <title id="t">
+    BytePlus Seedance workflow reference — independent badge, not official
+    partner status
+  </title>
+  <rect width="420" height="160" rx="20" fill="#111520" />
+  <path
+    d="m34 50 24-14 24 14v28L58 92 34 78Zm24-14v28m-24-14 24 14 24-14M58 64v28"
+    fill="none"
+    stroke="#00c2ff"
+    stroke-width="3"
+  />
+  <g font-family="system-ui,sans-serif">
+    <text x="104" y="66" fill="#f2f3f7" font-size="32" font-weight="650">
+      BytePlus
+    </text>
+    <text x="106" y="96" fill="#00c2ff" font-size="20" letter-spacing="3">
+      SEEDANCE
+    </text>
+    <text x="210" y="141" text-anchor="middle" fill="#a4afc2" font-size="9">
+      INDEPENDENT WORKFLOW REFERENCE · NO ENDORSEMENT
+    </text>
+  </g>
+</svg>
