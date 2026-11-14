@@ -1,0 +1,77 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="630"
+  viewBox="0 0 1200 630"
+  role="img"
+  aria-labelledby="t d"
+>
+  <title id="t">Seedance Director Studio</title>
+  <desc id="d">
+    An independent AI cinema workspace, from first idea to final frame.
+  </desc>
+  <defs>
+    <radialGradient id="g">
+      <stop stop-color="#775528" stop-opacity=".5" />
+      <stop offset="1" stop-color="#080a0f" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="line">
+      <stop stop-color="#e5a93c" />
+      <stop offset="1" stop-color="#00c2ff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#080a0f" />
+  <circle cx="960" cy="310" r="350" fill="url(#g)" />
+  <g fill="none" stroke="#e5a93c" opacity=".4">
+    <circle cx="966" cy="302" r="206" />
+    <ellipse
+      cx="966"
+      cy="302"
+      rx="106"
+      ry="206"
+      transform="rotate(35 966 302)"
+    />
+    <ellipse cx="966" cy="302" rx="206" ry="70" />
+  </g>
+  <path
+    d="M791 477h350M815 477V335h31v142m25 0V292h36v185m26 0V245h26v232m18 0V139l8-42 8 42v338m24 0V287h33v190m24 0V341h27v136"
+    fill="#111520"
+    stroke="#00c2ff"
+    stroke-width="2"
+  />
+  <path d="M64 66h1072" stroke="url(#line)" />
+  <g font-family="system-ui,sans-serif">
+    <text x="64" y="119" fill="#e5a93c" font-size="17" letter-spacing="4">
+      DUBAI · AI CINEMA · 2027
+    </text>
+    <text
+      x="60"
+      y="242"
+      fill="#f2f3f7"
+      font-size="69"
+      font-weight="650"
+      letter-spacing="-3"
+    >
+      SEEDANCE
+    </text>
+    <text
+      x="60"
+      y="322"
+      fill="#f2f3f7"
+      font-size="69"
+      font-weight="650"
+      letter-spacing="-3"
+    >
+      DIRECTOR STUDIO
+    </text>
+    <text x="64" y="385" fill="#e5a93c" font-size="26">
+      From first idea to final frame.
+    </text>
+    <text x="64" y="450" fill="#a4afc2" font-size="18">
+      PROMPT. PLAN. CREATE. REFINE.
+    </text>
+    <text x="64" y="556" fill="#a4afc2" font-size="14">
+      INDEPENDENT CREATOR COMPANION · OFFLINE-READY · NO AFFILIATION
+    </text>
+  </g>
+</svg>
