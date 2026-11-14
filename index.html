@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Seedance Director Studio — Independent AI Film Companion</title>
+    <meta
+      name="description"
+      content="An independent, offline-ready AI filmmaking workspace: Seedance prompt architecture, shot planning, runtime estimates, cinema glossary and AI Award 2027 preparation."
+    />
+    <meta name="theme-color" content="#080A0F" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Director Studio" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Seedance Director Studio" />
+    <meta
+      property="og:description"
+      content="From first idea to final frame. Your independent, offline AI cinema workspace."
+    />
+    <meta property="og:image" content="./icons/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Seedance Director Studio, independent AI cinema workspace"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Seedance Director Studio" />
+    <meta
+      name="twitter:description"
+      content="An independent offline AI cinema workspace."
+    />
+    <meta name="twitter:image" content="./icons/og-image.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="./favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/data.js" defer></script>
+    <script src="./scripts/generate-icons.js" defer></script>
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to workspace</a>
+    <header class="app-header">
+      <a class="brand" href="#hub" aria-label="Director Studio home"
+        ><img src="./favicon.svg" width="44" height="44" alt="" /><span
+          >DIRECTOR<span class="brand-sub">SEEDANCE STUDIO</span></span
+        ></a
+      >
+      <div class="header-actions">
+        <span id="connection" class="status" role="status"
+          >Checking connection</span
+        ><button
+          id="theme-toggle"
+          class="icon-button"
+          aria-label="Switch color theme"
+          title="Switch color theme"
+        >
+          ◐</button
+        ><button class="button small" id="install-button">
+          Install app <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </header>
+    <nav class="main-nav" aria-label="Workspace">
+      <a href="#hub" data-view="hub" aria-current="page"
+        ><span aria-hidden="true">◈</span><span>Overview</span></a
+      ><a href="#studio" data-view="studio"
+        ><span aria-hidden="true">⌘</span><span>Studio</span></a
+      ><a href="#toolkit" data-view="toolkit"
+        ><span aria-hidden="true">▤</span><span>Production</span></a
+      ><a href="#glossary" data-view="glossary"
+        ><span aria-hidden="true">◎</span><span>Glossary</span></a
+      ><a href="#readiness" data-view="readiness"
+        ><span aria-hidden="true">✓</span><span>Readiness</span></a
+      >
+    </nav>
+    <div id="update-banner" class="notice update-banner" hidden>
+      A new studio version is ready. Save or export your work before reloading.
+      <button id="update-button" class="button small">Update now</button>
+    </div>
+    <div id="storage-warning" class="notice error" role="alert" hidden>
+      Device storage is unavailable or full. Changes remain in this session
+      only. Export a project backup to keep your work.
+    </div>
+    <main id="main" tabindex="-1">
+      <section id="view-hub" class="view" aria-labelledby="hub-title">
+        <div class="hero">
+          <div class="hero-content">
+            <p class="eyebrow">DUBAI · AI CINEMA · 2027</p>
+            <h1 id="hub-title">
+              Every great film<br />starts with <em>intent.</em>
+            </h1>
+            <p class="hero-description">
+              Your director’s desk for the next frontier of cinema. Shape a
+              story. Design the motion. Make every frame matter.
+            </p>
+            <div class="button-row">
+              <a class="button primary" href="#studio"
+                >Open prompt studio <span aria-hidden="true">↗</span></a
+              ><a class="button" href="#toolkit">Plan your film</a>
+            </div>
+            <div class="hero-meta">
+              <span><i class="dot"></i> LOCAL-FIRST WORKSPACE</span
+              ><span>NO API KEY REQUIRED</span>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orb">
+              <div class="orbit o1"></div>
+              <div class="orbit o2"></div>
+              <div class="orbit o3"></div>
+              <div class="sun"></div>
+              <div class="skyline">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <span class="art-caption"
+              >25°12′ N · 55°16′ E<br />IMAGINATION, WITHOUT LIMITS</span
+            >
+          </div>
+        </div>
+        <div class="lockup">
+          <img
+            src="./images/logo-partnership.svg"
+            width="960"
+            height="100"
+            alt="1 Billion Followers Summit Dubai, AI Award 2027, and BytePlus Seedance workflow references. Independent companion, no affiliation."
+          />
+        </div>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE DIRECTOR’S COMPASS</p>
+            <h2>Story first. Technology in service.</h2>
+          </div>
+          <span class="badge">04 CREATIVE PILLARS</span>
+        </div>
+        <div class="grid four">
+          <article class="card pillar">
+            <span class="card-number">01 / NARRATIVE</span>
+            <h3>A story worth telling</h3>
+            <p>
+              Build character, conflict and emotional resolution before
+              generating a single frame.
+            </p>
+          </article>
+          <article class="card pillar">
+            <span class="card-number">02 / VISUAL CRAFT</span>
+            <h3>Control the frame</h3>
+            <p>
+              Translate a clear cinematic intention into precise Seedance scene
+              and motion direction.
+            </p>
+          </article>
+          <article class="card pillar">
+            <span class="card-number">03 / SOUND & RHYTHM</span>
+            <h3>Make the silence speak</h3>
+            <p>
+              Plan dialogue, ambience, musical beats and editorial pacing as one
+              audiovisual language.
+            </p>
+          </article>
+          <article class="card pillar">
+            <span class="card-number">04 / HUMAN IMPACT</span>
+            <h3>Leave a lasting feeling</h3>
+            <p>
+              Tell an original, culturally thoughtful story with human stakes,
+              not just spectacular images.
+            </p>
+          </article>
+        </div>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CREATOR REFERENCE</p>
+            <h2>Your visual field guide</h2>
+          </div>
+          <a
+            href="./images/ref-cinematography.svg"
+            target="_blank"
+            rel="noopener"
+            class="text-link"
+            >Open full reference ↗</a
+          >
+        </div>
+        <div class="grid reference-grid">
+          <article class="card visual-reference">
+            <img
+              src="./images/ref-cinematography.svg"
+              width="960"
+              height="600"
+              alt="Aspect ratios 16:9, 9:16 and 2.39:1; dolly, pan and crane camera axes; wide, medium and close-up framing."
+            />
+          </article>
+          <div class="stack">
+            <article class="card">
+              <span class="eyebrow cyan">T2V · FROM WORDS TO WORLDS</span>
+              <h3>Text → Video</h3>
+              <p>
+                Define subject, action, environment and a single deliberate
+                camera move. Let the description carry the visual intent.
+              </p>
+            </article>
+            <article class="card">
+              <span class="eyebrow cyan">I2V · ANCHORED IN A FRAME</span>
+              <h3>Image → Video</h3>
+              <p>
+                Use an authorized starting image to anchor composition. Prompt
+                changes and motion rather than redescribing every pixel.
+              </p>
+            </article>
+            <article class="card">
+              <span class="eyebrow cyan"
+                >FIRST + LAST · A DESIGNED ARRIVAL</span
+              >
+              <h3>Keyframes → Video</h3>
+              <p>
+                Specify two compatible frames and the transition between them.
+                Availability depends on the chosen model and endpoint.
+              </p>
+            </article>
+          </div>
+        </div>
+        <div class="notice">
+          <strong>Independent companion, not an official partnership.</strong>
+          These original typographic marks identify the event and workflow; they
+          are not official logos. The award page names Dreamina Seedance.
+          BytePlus access is not represented here as a separate approved award
+          partner. Creative pillars above are guidance, not a verbatim judging
+          rubric.
+          <a
+            href="https://www.1billionsummit.com/ai-award-2027"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Read the official award rules ↗</a
+          >
+        </div>
+      </section>
+      <section
+        id="view-studio"
+        class="view"
+        aria-labelledby="studio-title"
+        hidden
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">INTENT → DIRECTION → MOTION</p>
+            <h1 id="studio-title">Prompt studio</h1>
+            <p class="muted">
+              A clear brief is your most powerful production tool.
+            </p>
+          </div>
+          <span class="badge">SAVED ON THIS DEVICE</span>
+        </div>
+        <div class="studio-grid">
+          <form id="prompt-form" class="card form-card">
+            <fieldset>
+              <legend><span class="step">01</span> Story & subject</legend>
+              <div class="field">
+                <label for="mode">Generation mode</label
+                ><select id="mode" name="mode"></select>
+              </div>
+              <div class="field">
+                <label for="subject">Subject / character</label
+                ><input
+                  id="subject"
+                  name="subject"
+                  maxlength="600"
+                  placeholder="A young Emirati archivist in a sand-colored coat"
+                />
+              </div>
+              <div class="field">
+                <label for="action">Action / choreography</label
+                ><textarea
+                  id="action"
+                  name="action"
+                  rows="2"
+                  maxlength="1200"
+                  placeholder="She opens a memory capsule; light spills across her hands"
+                ></textarea>
+              </div>
+              <div class="field">
+                <label for="environment">Environment</label
+                ><input
+                  id="environment"
+                  name="environment"
+                  list="environments"
+                  maxlength="600"
+                  placeholder="Futuristic Dubai skyline at blue hour"
+                /><datalist id="environments">
+                  <option value="Futuristic Dubai skyline"></option>
+                  <option value="Desert dunes at golden hour"></option>
+                  <option value="A rain-soaked cyber-souk"></option>
+                  <option value="An Al Fahidi courtyard at dawn"></option>
+                </datalist>
+              </div>
+              <div class="field">
+                <label for="tone">Emotional tone</label
+                ><input
+                  id="tone"
+                  name="tone"
+                  maxlength="300"
+                  placeholder="Quiet wonder, intimate and hopeful"
+                />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span class="step">02</span> Cinematic language</legend>
+              <div class="grid two">
+                <div class="field">
+                  <label for="shot">Shot size</label
+                  ><select id="shot" name="shot"></select>
+                </div>
+                <div class="field">
+                  <label for="lens">Lens intent</label
+                  ><select id="lens" name="lens"></select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="lighting">Lighting</label
+                ><select id="lighting" name="lighting"></select>
+              </div>
+              <div class="field">
+                <label for="camera">Camera movement</label
+                ><select id="camera" name="camera"></select>
+              </div>
+              <div class="field">
+                <label for="motion"
+                  >Motion intensity
+                  <output id="motion-value" for="motion">4 / 10</output></label
+                ><input
+                  id="motion"
+                  name="motion"
+                  type="range"
+                  min="1"
+                  max="10"
+                  value="4"
+                /><span class="field-help"
+                  >Creative direction, not a universal numeric Seedance API
+                  setting.</span
+                >
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend><span class="step">03</span> Delivery planning</legend>
+              <div class="grid two">
+                <div class="field">
+                  <label for="ratio">Aspect ratio</label
+                  ><select id="ratio" name="ratio"></select>
+                </div>
+                <div class="field">
+                  <label for="duration">Clip duration</label
+                  ><select id="duration" name="duration">
+                    <option value="5">5 seconds</option>
+                    <option value="10">10 seconds</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="fps">Timeline / delivery frame rate</label
+                ><select id="fps" name="fps">
+                  <option value="24">24 fps · cinema</option>
+                  <option value="30">30 fps · delivery target</option>
+                  <option value="60">60 fps · delivery target</option></select
+                ><span class="field-help"
+                  >Not a promise of native generation support. Conform or
+                  interpolate in post as needed.</span
+                >
+              </div>
+              <div class="field">
+                <label for="seed">Seed number</label>
+                <div class="seed-row">
+                  <input
+                    type="number"
+                    id="seed"
+                    name="seed"
+                    min="0"
+                    max="4294967295"
+                    step="1"
+                    inputmode="numeric"
+                  /><button
+                    type="button"
+                    id="random-seed"
+                    class="button"
+                    aria-label="Randomize seed"
+                  >
+                    ↻</button
+                  ><button
+                    type="button"
+                    id="lock-seed"
+                    class="button"
+                    aria-pressed="false"
+                  >
+                    Lock
+                  </button>
+                </div>
+              </div>
+              <div class="field">
+                <label for="avoid">Avoid / review notes</label
+                ><textarea
+                  id="avoid"
+                  name="avoid"
+                  rows="2"
+                  maxlength="800"
+                  placeholder="Check hand anatomy, signage and face continuity"
+                ></textarea>
+              </div>
+            </fieldset>
+          </form>
+          <aside class="output-column">
+            <article class="card output-card">
+              <div class="section-heading compact">
+                <span class="eyebrow cyan">LIVE DIRECTION BRIEF</span
+                ><span class="live-dot">LIVE</span>
+              </div>
+              <pre
+                id="prompt-output"
+                tabindex="0"
+                aria-label="Compiled prompt"
+              ></pre>
+              <button class="button primary full" id="copy-prompt">
+                Copy prompt <span aria-hidden="true">⧉</span></button
+              ><button class="button full" id="prompt-to-shot">
+                Add to shot list <span aria-hidden="true">＋</span>
+              </button>
+              <p class="field-help">
+                Copyable flags are explicitly prefixed <code>--plan-</code>.
+                They are studio metadata, not executable API syntax. Lens,
+                motion, frame rate and avoidance notes must be mapped to your
+                chosen model’s supported controls.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Direct one idea at a time.</h3>
+              <p class="muted">
+                A slow dolly into a held expression often tells more than five
+                competing camera moves. Keep one dominant action, a stable
+                subject description and an achievable endpoint.
+              </p>
+              <a
+                class="text-link"
+                href="https://docs.byteplus.com/en/docs/modelark/create-video-generation-task-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Check your ModelArk endpoint ↗</a
+              >
+            </article>
+          </aside>
+        </div>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CURATED STARTING POINTS</p>
+            <h2>Start with a cinematic intention</h2>
+          </div>
+          <span class="badge">8 DIRECTOR PRESETS</span>
+        </div>
+        <div id="presets" class="grid three"></div>
+      </section>
+      <section
+        id="view-toolkit"
+        class="view"
+        aria-labelledby="toolkit-title"
+        hidden
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE PRODUCTION DESK</p>
+            <h1 id="toolkit-title">Plan the film. Protect the rhythm.</h1>
+          </div>
+          <button class="button primary" id="new-shot">Add a shot ＋</button>
+        </div>
+        <div class="stats-grid">
+          <article class="card stat">
+            <span>PLANNED SHOTS</span><strong id="shot-count">0</strong>
+          </article>
+          <article class="card stat">
+            <span>TIMELINE RUNTIME</span><strong id="shot-runtime">0:00</strong>
+          </article>
+          <article class="card stat">
+            <span>EDITED SHOTS</span><strong id="shot-edited">0</strong>
+          </article>
+        </div>
+        <article class="card">
+          <div class="section-heading compact">
+            <h2>Scene & shot list</h2>
+            <div class="button-row">
+              <button class="button small" id="copy-markdown">
+                Copy Markdown</button
+              ><button class="button small" id="copy-csv">Copy CSV</button
+              ><button class="button small" id="export-csv">Export CSV</button>
+            </div>
+          </div>
+          <div id="shot-list"></div>
+        </article>
+        <article class="card calculator">
+          <div>
+            <p class="eyebrow cyan">RUNTIME & PACING</p>
+            <h2>Know what the story needs.</h2>
+            <p class="muted">
+              Shot and render estimates are planning arithmetic, not a Seedance
+              price quote. Allow extra handles, retries, audio and editorial
+              breathing room.
+            </p>
+          </div>
+          <form id="runtime-form" class="grid two">
+            <div class="field">
+              <label for="target-runtime">Target film length (seconds)</label
+              ><input
+                id="target-runtime"
+                type="number"
+                min="1"
+                max="86400"
+                value="360"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="clip-duration">Usable seconds per shot</label
+              ><select id="clip-duration">
+                <option value="5">5 seconds</option>
+                <option value="10">10 seconds</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="takes">Takes per selected shot</label
+              ><select id="takes">
+                <option value="3">3 takes</option>
+                <option value="4">4 takes</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="credit-rate">Optional credits per render</label
+              ><input
+                id="credit-rate"
+                type="number"
+                min="0"
+                max="1000000"
+                step="0.01"
+                placeholder="Enter your provider rate"
+              />
+            </div>
+          </form>
+          <div id="runtime-result" class="result-panel" role="status"></div>
+        </article>
+      </section>
+      <section
+        id="view-glossary"
+        class="view"
+        aria-labelledby="glossary-title"
+        hidden
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LEARN THE LANGUAGE OF AI CINEMA</p>
+            <h1 id="glossary-title">The director’s lexicon</h1>
+            <p class="muted">
+              Practical definitions. Reusable direction. No magic switches.
+            </p>
+          </div>
+          <span class="badge" id="glossary-count"></span>
+        </div>
+        <div class="card filters">
+          <div class="field">
+            <label for="glossary-search"
+              >Search terms, definitions or modifiers</label
+            ><input
+              type="search"
+              id="glossary-search"
+              placeholder="Try temporal consistency, lens, LUT…"
+            />
+          </div>
+          <div class="field">
+            <label for="glossary-category">Category</label
+            ><select id="glossary-category">
+              <option value="all">All categories</option>
+            </select>
+          </div>
+        </div>
+        <div id="glossary-list" class="grid three"></div>
+      </section>
+      <section
+        id="view-readiness"
+        class="view"
+        aria-labelledby="readiness-title"
+        hidden
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FROM ROUGH CUT TO SUBMISSION</p>
+            <h1 id="readiness-title">Ready for the big screen.</h1>
+            <p class="muted">
+              A production aid, not an eligibility certification.
+            </p>
+          </div>
+          <a
+            href="https://www.1billionsummit.com/ai-award-2027"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+            >Official award page ↗</a
+          >
+        </div>
+        <div class="grid reference-grid">
+          <article class="card">
+            <span class="eyebrow cyan">READINESS TRACKER</span>
+            <h2>Make the final checks count.</h2>
+            <div class="progress-heading">
+              <span id="checklist-label">0 completed</span
+              ><strong id="checklist-percent">0%</strong>
+            </div>
+            <progress
+              id="checklist-progress"
+              max="100"
+              value="0"
+              aria-labelledby="checklist-label"
+            ></progress>
+            <div id="checklist"></div>
+          </article>
+          <aside class="stack">
+            <article class="card">
+              <span class="eyebrow">AWARD PAGE SNAPSHOT · 14 NOV 2026</span>
+              <h2>One film. One connected story.</h2>
+              <dl class="spec-list">
+                <div>
+                  <dt>Runtime</dt>
+                  <dd>5–7 minutes</dd>
+                </div>
+                <div>
+                  <dt>Picture</dt>
+                  <dd>16:9 · 1080p</dd>
+                </div>
+                <div>
+                  <dt>Container</dt>
+                  <dd>MOV or MP4</dd>
+                </div>
+                <div>
+                  <dt>Language</dt>
+                  <dd>English subtitles required</dd>
+                </div>
+                <div>
+                  <dt>Primary generation</dt>
+                  <dd>At least 70% Seedance</dd>
+                </div>
+                <div>
+                  <dt>Submission deadline</dt>
+                  <dd>20 November 2026</dd>
+                </div>
+              </dl>
+              <p class="field-help">
+                Page schedules and terms can change. Confirm intro placement and
+                runtime treatment in the current terms. 4K is an optional
+                workflow master, not the stated submission resolution.
+              </p>
+              <a
+                class="text-link"
+                href="https://www.1billionsummit.com/ai-award-2027"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Verify live requirements ↗</a
+              >
+            </article>
+            <article class="card">
+              <h3>Choose a human theme</h3>
+              <p>
+                Society, Community & Humanitarian Issues; Truth, Fake News &
+                Misinformation; Humans & AI; Climate, Nature & Our Changing
+                Planet; or Human Relationships.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Ownership starts before the edit.</h3>
+              <p>
+                Keep licenses for references, music, performances and voices.
+                Retain generation records and consent documentation. Your
+                checked boxes are a personal record, not legal advice.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <strong>SEEDANCE DIRECTOR STUDIO</strong>
+        <p>
+          Independent creator toolkit. No affiliation or endorsement.<br />Your
+          creative data stays in this browser. Back up important work.
+        </p>
+      </div>
+      <div class="footer-actions">
+        <button class="button small" id="settings-button">
+          Settings & backups</button
+        ><button class="button small" id="export-assets">
+          Export PWA Icon & OG-Image Pack</button
+        ><span id="cache-status" class="field-help" role="status"
+          >Offline tools become available after the first complete online
+          load.</span
+        >
+      </div>
+    </footer>
+    <div
+      id="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      class="toast"
+      hidden
+    ></div>
+    <dialog id="shot-dialog" aria-labelledby="shot-dialog-title">
+      <form id="shot-form">
+        <div class="section-heading compact">
+          <h2 id="shot-dialog-title">Shot direction</h2>
+          <button
+            type="button"
+            class="icon-button close-dialog"
+            aria-label="Close shot editor"
+          >
+            ×
+          </button>
+        </div>
+        <input type="hidden" id="shot-id" />
+        <div class="field">
+          <label for="shot-title">Scene / shot title</label
+          ><input
+            id="shot-title"
+            maxlength="160"
+            required
+            placeholder="01 · The archive awakens"
+          />
+        </div>
+        <div class="field">
+          <label for="shot-prompt">Seedance direction brief</label
+          ><textarea
+            id="shot-prompt"
+            rows="6"
+            maxlength="12000"
+            required
+          ></textarea>
+        </div>
+        <div class="grid two">
+          <div class="field">
+            <label for="shot-seconds">Duration (seconds)</label
+            ><input
+              id="shot-seconds"
+              type="number"
+              min="0.1"
+              max="3600"
+              step="0.1"
+              value="5"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="shot-status">Status</label
+            ><select id="shot-status">
+              <option>Draft</option>
+              <option>Generating</option>
+              <option>Upscaled</option>
+              <option>Edited</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="shot-camera">Camera move</label
+          ><select id="shot-camera"></select>
+        </div>
+        <div class="button-row">
+          <button type="submit" class="button primary">Save shot</button
+          ><button type="button" class="button close-dialog">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="install-dialog" aria-labelledby="install-title">
+      <div class="section-heading compact">
+        <h2 id="install-title">Take the studio with you.</h2>
+        <button
+          class="icon-button close-dialog"
+          aria-label="Close install help"
+        >
+          ×
+        </button>
+      </div>
+      <p id="install-instructions">
+        Use your browser’s Install app or Add to Home Screen command. On iPhone
+        or iPad, open this page in Safari, tap Share, then Add to Home Screen
+        and confirm Open as Web App.
+      </p>
+      <p class="muted">
+        Installation needs HTTPS or localhost and a supported browser. Open the
+        app online once and wait for the offline-ready notice. An installed app
+        and local storage are not a backup.
+      </p>
+    </dialog>
+    <dialog id="settings-dialog" aria-labelledby="settings-title">
+      <div class="section-heading compact">
+        <h2 id="settings-title">Your workspace, your control.</h2>
+        <button class="icon-button close-dialog" aria-label="Close settings">
+          ×
+        </button>
+      </div>
+      <div class="field">
+        <label for="theme-preference">Appearance</label
+        ><select id="theme-preference">
+          <option value="system">Follow device</option>
+          <option value="dark">Cinema dark</option>
+          <option value="light">Daylight light</option>
+        </select>
+      </div>
+      <div class="button-row">
+        <button class="button primary" id="export-project">
+          Export project JSON</button
+        ><label class="button file-label" for="import-project"
+          >Import project JSON</label
+        ><input
+          class="sr-only"
+          type="file"
+          id="import-project"
+          accept="application/json,.json"
+        />
+      </div>
+      <p class="field-help">
+        Import replaces prompts, shots, calculator settings and checklist after
+        confirmation. No account sync or server upload. A corrupted or
+        incompatible import is rejected.
+      </p>
+      <p class="muted">
+        This is a planning workspace, not a video generator or award submission
+        portal. No rendering credentials are collected. Generated reference
+        assets are original illustrative artwork.
+      </p>
+      <div class="button-row">
+        <button id="reset-workspace" class="button danger">
+          Reset workspace</button
+        ><button id="check-update" class="button">Check for updates</button>
+      </div>
+    </dialog>
+    <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+      <h2 id="confirm-title">Confirm workspace change</h2>
+      <p id="confirm-message"></p>
+      <div class="button-row">
+        <button id="confirm-yes" class="button danger">Confirm</button
+        ><button id="confirm-no" class="button">Cancel</button>
+      </div>
+    </dialog>
+    <noscript
+      ><div class="notice error">
+        Enable JavaScript for interactive tools. The
+        <a href="./offline.html">offline help page</a> and
+        <a href="./images/ref-cinematography.svg">cinematography reference</a>
+        remain readable.
+      </div></noscript
+    >
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./sw.js").catch(function () {
+            var e = document.getElementById("cache-status");
+            if (e)
+              e.textContent =
+                "Offline caching unavailable. Use HTTPS or localhost and allow browser storage.";
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

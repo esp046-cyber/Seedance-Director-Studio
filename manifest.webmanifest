@@ -1,0 +1,123 @@
+{
+  "id": "./",
+  "name": "Seedance Director Studio — Independent AI Cinema Companion",
+  "short_name": "Director Studio",
+  "description": "Independent offline tools for AI filmmakers: Seedance prompt planning, shot lists, runtime estimates, glossary and AI Award preparation. No affiliation or endorsement.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080A0F",
+  "theme_color": "#080A0F",
+  "orientation": "any",
+  "categories": ["productivity", "photo", "education"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "./icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Prompt Studio",
+      "short_name": "Studio",
+      "description": "Architect a Seedance direction brief",
+      "url": "./#studio",
+      "icons": [
+        { "src": "./icons/icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
+    },
+    {
+      "name": "Production Toolkit",
+      "short_name": "Shot List",
+      "description": "Plan shots and estimate runtime",
+      "url": "./#toolkit",
+      "icons": [
+        { "src": "./icons/icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
+    },
+    {
+      "name": "Submission Readiness",
+      "short_name": "Readiness",
+      "description": "Review your submission checklist",
+      "url": "./#readiness",
+      "icons": [
+        { "src": "./icons/icon-96.png", "sizes": "96x96", "type": "image/png" }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./screenshots/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop studio overview with cinematic tools"
+    },
+    {
+      "src": "./screenshots/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile studio overview with bottom navigation"
+    }
+  ]
+}
